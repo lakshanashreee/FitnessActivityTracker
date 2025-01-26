@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Activity Tracker</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        header {
+            background-color: #2d6cdf;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+        }
+
+        nav ul li {
+            font-size: 1rem;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background-image: url('https://source.unsplash.com/1600x800/?fitness,workout');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .hero button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #fff;
+            color: #2d6cdf;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .hero button:hover {
+            background-color: #f4f4f4;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 20px;
+            border-radius: 5px;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .feature p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #2d6cdf;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        .stats-container {
+            padding: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .stat {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 150px;
+            text-align: center;
+        }
+
+        .stat h3 {
+            color: #2d6cdf;
+        }
+
+        .stat p {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Fitness Activity Tracker</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h2>Track Your Fitness Goals</h2>
+            <p>Stay motivated and track your progress in one place.</p>
+            <button>Get Started</button>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h3>Track Steps</h3>
+            <p>Monitor your daily steps and reach your walking goals.</p>
+        </div>
+        <div class="feature">
+            <h3>Burn Calories</h3>
+            <p>Calculate calories burned with every workout.</p>
+        </div>
+        <div class="feature">
+            <h3>Set Goals</h3>
+            <p>Plan and achieve fitness milestones with ease.</p>
+        </div>
+    </section>
+
+    <section class="stats-container">
+        <div class="stat">
+            <h3>Steps</h3>
+            <p id="steps">0</p>
+        </div>
+        <div class="stat">
+            <h3>Calories Burned</h3>
+            <p id="calories">0</p>
+        </div>
+        <div class="stat">
+            <h3>Distance</h3>
+            <p id="distance">0 km</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Fitness Activity Tracker. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Example of dynamic data updates
+        let steps = 0;
+        let calories = 0;
+        let distance = 0;
+
+        setInterval(() => {
+            steps += Math.floor(Math.random() * 10 + 1);
+            calories += Math.random().toFixed(2) * 2;
+            distance = (steps / 1312.34).toFixed(2); // Example conversion
+
+            document.getElementById('steps').innerText = steps;
+            document.getElementById('calories').innerText = calories.toFixed(2);
+            document.getElementById('distance').innerText = distance + ' km';
+        }, 1000);
+    </script>
+</body>
+
+</html>
