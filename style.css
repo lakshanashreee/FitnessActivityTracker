@@ -1,0 +1,295 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    display: grid;
+    font-family: 'M PLUS 1p', sans-serif;
+    grid-template-columns: 25% 75%;
+    height: 105vh;
+    background-color: rgba(216, 186, 155, .3);
+  }
+  
+  header {
+    grid-row: 1/2;
+    grid-column: 2/-1;
+    color: #FC4A1A;
+    font-size: 1.6rem;
+    margin-left: 15px;
+  }
+  
+  aside {
+    grid-row: 1/-1;
+    grid-column: 1/2;
+    background-color: rgba(74,189,172, 0.8);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  li {
+    font-size: .9em;
+    list-style-type: none;
+  }
+  
+  main {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  h1 {
+    color: #fff;
+    font-weight: 900;
+    text-align: center;
+  }
+  
+  .main-top--today--title {
+    text-align: center;
+  }
+  .user-image-container {
+    text-align: center;
+  }
+  .user-image {
+    border-radius: 50%;
+    border: solid 5px rgb(247,183,51);
+    height: 120px;
+    background-color: white;
+    margin-top: 25px;
+    text-align: center;
+  }
+  
+  .aside--user-name {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+  }
+  
+  .weekly-ranks {
+    text-align: center;
+  }
+  
+  hr {
+    color: #fff;
+    margin: 0 8px;
+  }
+  
+  .aside-info {
+    margin-top: 5px;
+    margin-right: 2px;
+  }
+  
+  .aside-titles {
+    margin-bottom: 0;
+    font-size: 1.75rem;
+  }
+  
+  .aside--increase-step-count-value {
+    word-wrap: break-word;
+  }
+  
+  .main-top--today-stats--activity-title,
+  .main-top--today-stats--sleep-title,
+  .main-top--today-stats--hydration-title,
+  .main-bottom--weekly-stats--activity-title,
+  .main-bottom--weekly-stats--sleep-title,
+  .main-bottom--weekly-stats--hydration-title,
+  .right--friends-stats--friends-title,
+  .common-trends-title{
+    font-size: 1.75rem;
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  .today-image {
+    height: 75px;
+    text-align: center;
+    margin: 30px;
+  }
+  
+  .today-values,
+  .today-keys {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+  
+  .main-top--today-stats--activity {
+    grid-row: 1/2;
+    grid-template: 1/2;
+    margin: 10px;
+    background-color: rgba(247,183,51, 0.8);
+    text-align: center;
+    border: 6px solid rgb(247,183,51);
+    border-radius: 5%;
+  }
+  
+  .main-top--today-stats--sleep {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    margin: 10px;
+    background-color: rgba(252,74,26, 0.8);
+    text-align: center;
+    border: 6px solid rgb(252,74,26);
+    border-radius: 5%;
+  }
+  
+  .main-top--today-stats--hydration {
+    grid-row: 1/2;
+    grid-column: 3/4;
+    margin: 10px;
+    background-color: rgba(74,189,172, 0.8);
+    text-align: center;
+    border: 6px solid rgb(74,189,172);
+    border-radius: 5%;
+  }
+  
+  .hydration-image {
+    margin-top: 40px;
+  }
+  
+  .main-top--today-stats--hydration-numOunces-key,
+  .main-top--today-stats--hydration-numOunces-value {
+    font-size: 1.2rem;
+    margin-top: 50px;
+  }
+  
+  .main-bottom--weekly-stats--activity {
+    grid-row: 2/4;
+    grid-column: 1/3;
+    margin: 10px;
+    background-color: white;
+    border-radius: 5%;
+    border: 6px solid rgb(252,74,26);
+  }
+  
+  .main-bottom--weekly-stats--activity-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  .activity-charts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+  }
+  
+  .charts {
+    height: 300px;
+  }
+  
+  .main-bottom--weekly-stats--sleep {
+    grid-row: 2/4;
+    grid-column: 3/4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #fff;
+    border: 6px solid rgb(247,183,51);
+    border-radius: 5%;
+    margin: 10px;
+    padding: 5px;
+  }
+  
+  .main-bottom--weekly-stats--hydration {
+    grid-row: 4/-1;
+    grid-column: 3/-1;
+    margin: 10px;
+    background-color: white;
+    border-radius: 5%;
+    border: 6px solid rgb(74,189,172);
+  }
+  
+  .right--friends-stats {
+    grid-row: 4/-1;
+    grid-column: 1/2;
+    margin: 10px;
+    border-radius: 5%;
+    border: 6px solid rgb(252,74,26);
+    background-color: rgba(252,74,26, 0.8);
+  }
+  
+  .user-ranks {
+    grid-row: 4/-1;
+    grid-column: 2/3;
+    margin: 10px;
+    border-radius: 5%;
+    border: 6px solid rgb(247,183,51);
+    background-color: rgba(247,183,51, 0.8);
+  }
+  
+  /* .main-top-today-stats--all-stats {
+    background-color: rgba(247,183,51, 0.1);
+    margin-top: 0;
+    text-align: center;
+  }
+  
+  
+  
+  
+  
+  
+  .main-top--today-stats--sleep-hours-key,
+  .main-top--today-stats--sleep-hours-value {
+    margin-top: 15px;
+  }
+  
+  .main-top--today-stats--hydration-numOunces-key,
+  .main-top--today-stats--hydration-numOunces-value {
+    margin-top: 25px;
+  }
+  
+  .main-center--weekly-stats {
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+  
+  .main-top-weekly-stats--all-stats {
+    background-color: rgba(252,74,26, 0.1);
+    margin-top: 0;
+    text-align: center;
+  }
+  
+  .main-bottom--weekly-stats--activity h4 {
+    margin: 8px 0;
+  }
+  
+  .main-bottom--weekly-stats--activity p {
+    margin: 2px 0;
+  }
+  
+  table {
+    border-collapse: collapse;
+  
+  }
+  table td {
+    border: 1px solid #000;
+    font-size: 13px;
+    width: 120px;
+    word-wrap: normal;
+  }
+  
+  .main-bottom--weekly-stats--hydration h4 {
+    margin: 8px 0;
+  }
+  
+  .main-bottom--weekly-stats--hydration p {
+    margin: 2px 0;
+  }
+  
+  .right--friends-stats--steps {
+    background-color: rgba(74,189,172, 0.1);
+    text-align: center;
+  }
+  
+  .right--friends-stats--steps h3 {
+    border-bottom: 8px;
+  }
+  
+  .right--friends-stats h4 {
+    margin: 10px 0;
+  }
+  
+  .right--friends-stats p {
+    margin: 2px 0;
+  } */
